@@ -24,13 +24,13 @@ var work = {
         "dates": "November 2014 - June 2016",
         "description": "Supported deaf and hard of hearing students’ learning through the use of PowerPoint lectures and lecture videos in the classroom."
     }, {
-       "employer": "Rochester Institute of Technology",
+        "employer": "Rochester Institute of Technology",
         "title": "Graduate Research Assistant for the Group Collaboration",
         "location": "Rochester, NY",
         "dates": "November 2014 - December 2015",
         "description": "Developed collaboration strategies (including use of computer technology) to help deaf and hard of hearing students work together equally and effectively when part of a team in a class at RIT or in a class in public schools."
     }, {
-       "employer": "Rochester Institute of Technology",
+        "employer": "Rochester Institute of Technology",
         "title": "Front End Web Developer",
         "location": "Rochester, NY",
         "dates": "June 2015 – August 2015",
@@ -123,7 +123,7 @@ bio.display = function() {
     $("#topContacts").append(HTMLlinkedin.replace(data, bio.contacts.linkedin));
     $("#topContacts").append(HTMLtwitter.replace(data, bio.contacts.twitter));
     $("#topContacts").append(HTMLlocation.replace(data, bio.contacts.location));
-    if(bio.skills.length > 0) {
+    if (bio.skills.length > 0) {
         $("#header").append(HTMLskillsStart);
         var formattedSkill = '';
         var $skillList = $("#skills");
@@ -143,7 +143,7 @@ bio.display = function() {
 bio.display();
 
 work.display = function() {
-    for(var job = 0; job < work.jobs.length; job++) {
+    for (var job = 0; job < work.jobs.length; job++) {
         // create new div for work experience
         $("#workExperience").append(HTMLworkStart);
         // concat employer and title
@@ -162,8 +162,8 @@ work.display = function() {
 work.display();
 
 projects.display = function() {
-    if(projects.projects.length > 0) {
-        for(var i = 0; i < projects.projects.length; i++) {
+    if (projects.projects.length > 0) {
+        for (var i = 0; i < projects.projects.length; i++) {
             $("#projects").append(HTMLprojectStart);
             var formattedProjectTitle = HTMLprojectTitle.replace(data, projects.projects[i].title).replace("#", projects.projects[i].url);
             var formattedProjectDates = HTMLprojectDates.replace(data, projects.projects[i].dates);
@@ -180,8 +180,8 @@ projects.display = function() {
 projects.display();
 
 education.display = function() {
-    if(education.schools.length > 0 || education.onlineCourses.length > 0) {
-        for(var school = 0; school < education.schools.length; school++) {
+    if (education.schools.length > 0 || education.onlineCourses.length > 0) {
+        for (var school = 0; school < education.schools.length; school++) {
             $("#education").append(HTMLschoolStart);
             var formattedSchoolName = HTMLschoolName.replace(data, education.schools[school].name).replace("#", education.schools[school].url);
             var formattedSchoolDegree = HTMLschoolDegree.replace(data, education.schools[school].degree);
@@ -194,9 +194,9 @@ education.display = function() {
             $(".education-entry:last").append(formattedSchoolMajor);
         }
 
-        if(education.onlineCourses.length > 0) {
+        if (education.onlineCourses.length > 0) {
             $("#education").append(HTMLonlineClasses);
-            for(var school = 0; school < education.onlineCourses.length; school++) {
+            for (school = 0; school < education.onlineCourses.length; school++) {
                 $("#education").append(HTMLschoolStart);
                 var formattedOnlineTitle = HTMLonlineTitle.replace(data, education.onlineCourses[school].title).replace("#", education.onlineCourses[school].url);
                 var formattedOnlineSchool = HTMLonlineSchool.replace(data, education.onlineCourses[school].school);
