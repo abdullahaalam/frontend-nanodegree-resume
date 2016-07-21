@@ -96,8 +96,13 @@ a {
   font-style: italic;
   font-size: 18px;
   color: #f3f3f3;
-  line-height: 28px;
+  line-height: 35px;
 }
+
+.skills {
+  margin-top: -20px;
+}
+
 
 #skills-h3 {
   color: #f5ae23;
@@ -105,16 +110,20 @@ a {
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #454545;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #999;
 }
 
 .white-text {
   font-weight: bold;
   color: #fff;
+}
+
+.flex-item {
+  margin-left: -15px;
 }
 
 .gray {
@@ -129,7 +138,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #000;
 }
 
 .flex-box {
@@ -139,6 +148,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
+  background-color: #000;
 }
 
 .flex-column {
@@ -159,7 +169,7 @@ ul {
 .biopic {
   float: left;
   padding: 10px;
-  width: 200px;
+  width: 300px;
   display: none;
 }
 
@@ -169,6 +179,8 @@ img {
 
 span {
   padding: 5px;
+  color: #fff;
+  font-weight: bold;
 }
 
 #lets-connect {
@@ -187,6 +199,14 @@ span {
   .biopic {
     width: 175px;
   }
+  .welcome-message {
+    display: none;
+  }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media only screen and (max-width: 750px) {
@@ -197,6 +217,15 @@ span {
     width: 150px;
   }
   .welcome-message {
+    display: none;
+  }
+  #topContacts {
+    display: none;
+  }
+  #skills-h3 {
+    display: none;
+  }
+  #skills {
     display: none;
   }
 }
@@ -214,7 +243,9 @@ span {
 }
 
 @media only screen and (min-width: 750px) {
-  #skills-h3,
+  #skills-h3 {
+    display: block;
+  }
   .biopic {
     display: block;
   }
